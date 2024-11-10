@@ -1,0 +1,966 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Exo 2", sans-serif;
+}
+
+:root{
+    --primary-color: #0F2041;
+    --secondary-color: #F6CD46;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container{
+    max-width: 1100px;
+    margin-inline: auto;
+}
+
+.margin-top{
+    margin-top: 40px;
+}
+
+header{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+header .top-header{
+    padding-block: 10px;
+    border-bottom: 1px solid rgb(129, 129, 129)
+}
+
+header .top-header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    font-size: 13px;
+}
+
+.d-flex{
+    display: flex;
+    gap: 20px;
+}
+
+.z-index{
+    z-index: 9;
+}
+header select{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+header .top-header-icon .d-flex{
+    gap: 40px;
+}
+
+header .top-header .left-content li{
+    position: relative;
+}
+
+header .top-header .left-content li::after{
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    transition: 0.5s;
+}
+
+header .top-header .left-content li:hover::after{
+    width: 50%;
+}
+
+header .nav-bar{
+    padding-block: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+header .nav-bar .d-flex{
+    gap: 45px;
+}
+
+header .nav-bar nav{
+    margin-left: 150px;
+}
+header .nav-bar .nav-icon{
+    font-size: 20px;
+}
+
+header .nav-bar nav li{
+    position: relative;
+}
+
+header .nav-bar nav li::after{
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    transition: 0.5s;   
+}
+
+header .nav-bar nav li:hover::after{
+    width: 70%;
+}
+
+header .bar{
+    padding-bottom: 30px;    
+}
+
+header .bar .browse-bar{
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 15px 25px;
+    color: black;
+    text-transform: uppercase; 
+    font-weight: 550;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+header .bar .browse-bar ul{
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background-color: white;
+    width: 100%;
+    border-radius: 7px;
+    border: 1px solid rgb(184, 182, 182);
+    padding: 30px;
+    font-size: 13px;
+    line-height: 50px;
+    color: rgb(46, 46, 46);
+    display: none;
+}
+
+header .bar .browse-bar:hover ul{
+    display: flex;
+    flex-direction: column;
+}
+
+header .bar .search-bar{
+    background-color: white;
+    color: gray;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-left: 20px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 5% 75% 20%;
+}
+header .bar .search-bar input{
+    background-color: transparent;
+    border: none;
+}
+
+header .bar .search-bar input::placeholder{
+    color: rgb(88, 88, 88);
+}
+
+header .bar .search-bar select{
+    color: gray;
+    font-size: 15px;
+}
+
+header .bar .search-bar i{
+    color: rgb(54, 53, 53);
+    font-size: 20px;
+}
+
+header .bar .search-bar input:focus-visible{
+    outline: none;
+}
+
+header .nav-bar nav ul .home{
+    position: relative;
+}
+header .nav-bar nav ul .home .home-menu{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    line-height: 30px;
+    width: 250px;
+    font-weight: 500;
+    display: none;
+}
+
+header .nav-bar nav ul .home:hover .home-menu{
+    display: flex;
+    flex-direction: column;
+}
+
+header .nav-bar nav ul .pages{
+    position: relative;
+}
+
+header .nav-bar nav ul .pages .pages-menu{
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    display: none;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    line-height: 40px;
+    width: 250px;
+    font-weight: 500;
+}
+
+header .nav-bar nav ul .pages:hover .pages-menu{
+    display: flex;
+    flex-direction: column;    
+}
+
+header .nav-bar nav ul .sub-menu li{
+    position: relative;
+}
+
+header .nav-bar nav ul .sub-menu li::after{
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: black;
+    border-radius: 5px;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    transition: 0.5s;
+}
+
+header .nav-bar nav ul .sub-menu li:hover::after{
+    width: 20%;
+}
+
+header .nav-bar .nav-icon{
+    position: relative;
+}
+header .nav-bar .nav-icon sub{
+    position: absolute;
+    top: 50%;
+    left: 98%;
+    font-size: 10px;
+    background-color: rgb(233, 153, 4);
+    padding: 2px 5px;
+    border-radius: 80%;
+
+}
+
+header .nav-bar nav ul .blog{
+    position: relative;
+}
+
+header .nav-bar nav ul .blog .blog-menu{
+    position: absolute;
+    top: 100%;
+    display: none;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    line-height: 40px;
+    width: 215px;
+    font-weight: 500;
+}
+
+header .nav-bar nav ul .blog:hover .blog-menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.banner{
+    display: grid;
+    grid-template-columns: 1fr 50% 1fr;
+    gap: 25px;
+}
+
+.banner ul{
+    list-style: disc;
+    padding: 40px 30px;
+    border: 1px solid rgb(235, 234, 234);
+    border-radius: 8px;
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 14px;
+}
+.banner .slider{
+    grid-row: span 2;
+    border-radius: 8px;
+    background-image: url(../images/banner-1.jpg); 
+    text-transform: uppercase;
+    padding: 100px 150px;
+}
+
+.slider-content .tagline{
+    color: rgb(240, 239, 239);
+    font-size: 15px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.slider-content .tagline span{
+    display: block;
+    content: "";
+    height: 2px;
+    width: 40px;
+    background-color: rgb(240, 239, 239);
+
+}
+
+.banner .slider .slider-content .heading{
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.banner .slider .slider-content a{
+    background-color: var(--secondary-color);
+    color: black;
+    border-radius: 7px;
+    padding: 15px 35px;
+    display: inline-block;
+    margin-top: 25px;
+}
+
+.banner img{
+    border-radius: 8px;
+}
+
+.banner .banner-two{
+    position: relative;
+}
+
+.banner .banner-two .banner-two-content{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    color: black;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+.banner .banner-two .banner-two-content a h6{
+    margin-top: 15px;
+    color: rgb(43, 43, 43);
+    position: relative;
+}
+
+.banner .banner-two .banner-two-content a h6::after{
+    content: "";
+    height: 2px;
+    width: 30%;
+    background-color: black;
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    transition: 0.5s;
+}
+
+.banner .banner-two .banner-two-content a h6:hover::after{
+    width: 40%;    
+}
+
+.banner .banner-three{
+    position: relative;
+}
+
+.banner .banner-three .banner-three-content{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    color: white;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+.banner .banner-three .banner-three-content a h6{
+    margin-top: 15px;
+    position: relative;
+}
+
+.banner .banner-three .banner-three-content a h6::after{
+    content: "";
+    height: 2px;
+    width: 30%;
+    background-color: white;
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    transition: 0.5s;
+}
+
+.banner .banner-three .banner-three-content a h6:hover::after{
+    width: 40%;
+}
+
+.benefit{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    
+}
+.benefit i{
+    font-size: 40px;
+    color: var(--primary-color);
+}
+
+.benefit h5{
+    color: var(--primary-color);
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.benefit h6{
+    color: gray;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.benefit .benefit-icon{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.bg-color{
+    background-color: #EEEEEE;
+}
+
+.categories-title{
+    justify-content: space-between;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    align-items: center;
+    padding-top: 100px;
+}
+
+.categories-title h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.categories-title a{
+    font-size: 12px;
+    font-weight: 700;
+    position: relative;
+}
+
+.categories-title a::after{
+    position: absolute;
+    bottom: -6px;
+    left: 0px;
+    content: "";
+    height: 2px;
+    width: 40%;
+    transition: 0.5s;
+    background-color: var(--primary-color);
+}
+
+.categories-title a:hover::after{
+    width: 100%;
+}
+
+
+.categories-image a{
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 15px;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.categories-image a::after{
+    content: "";
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    transition: 0.5s;
+    bottom: -5px;
+    left: 0%;
+    background-color: var(--primary-color);
+}
+
+.categories-image a:hover::after{
+    width: 30%;
+}
+
+.car-parts{
+    text-transform: uppercase;
+    margin-top: 100px;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+}
+.car-parts h2{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.car-parts ul{
+    display: flex;
+    gap: 40px;
+}
+.car-parts ul li{
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+}
+
+.car-parts ul li::after{
+    content: "";
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: -7px;
+    left: 0%;
+    transition: 0.5s;
+    background-color: var(--primary-color);
+}
+
+.car-parts ul li:hover::after{
+    width: 70%;
+}
+
+.car-parts-products{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.car-parts-products .car-products{
+    background-color: white;
+    padding: 20px;
+}
+
+.car-parts-products .car-products .product-img{
+    padding-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.car-products .product-img .hover-icon{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.car-parts-products .car-products:hover .hover-icon{
+    bottom: 1px;
+}
+
+
+.car-products .product-img .hover-icon li{
+    height: 30px;
+    width: 30px;
+    background-color: #f3e8d6;
+    border-radius: 50%;
+    color: #074e37;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    padding: 20px;
+    
+}
+
+.car-products .product-img .hover-icon li:hover{
+    background-color: #86bc42;
+    color: white;
+}
+
+.product-content h6{
+    color: gray;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 16px 0px 6px;
+}
+
+.product-content a{
+    color: rgb(41, 41, 41);
+    font-size: 15px;
+    margin: 30px 0px;
+}
+
+.product-content .rating i{
+    color: #ffc78b;
+    font-size: 13px;
+    margin-top: 15px;      
+}
+
+.product-content .rating span{
+    color: #767676;
+    margin-left: 5px;
+}
+
+.product-content .price{
+    color: #86bc42;
+    font-weight: 600;
+    margin-top: 15px;
+}
+.last-banner{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 100px;
+    position: relative;
+}
+.last-banner img{
+    border-radius: 8px;
+}
+
+.last-banner .banner-image{
+    position: relative;
+}
+
+.last-banner .banner-image .banner-content{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    color: white;
+}
+
+.last-banner .banner-image .banner-content h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.last-banner .banner-image .banner-content a{
+    display: block;
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+}
+
+.last-banner .banner-image .banner-content a::after{
+    content: "";
+    height: 2px;
+    width: 35%;
+    position: absolute;
+    transition: 0.5s;
+    bottom: -5px;
+    left: 0%;
+    background-color: white;
+}
+
+.last-banner .banner-image .banner-content a:hover::after{
+    width: 50%;
+}
+
+.popular-products{
+    justify-content: space-between;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    align-items: center;
+    padding-top: 100px;
+}
+
+.popular-products h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.popular-products a{
+        font-size: 12px;
+        font-weight: 700;
+        position: relative;
+}
+    
+.popular-products a::after{
+    position: absolute;
+    bottom: -6px;
+    left: 0px;
+    content: "";
+    height: 2px;
+    width: 40%;
+    transition: 0.5s;
+    background-color: var(--primary-color);
+}
+    
+.popular-products a:hover::after{
+    width: 100%;
+}
+
+.popular-products-slider{
+    padding-bottom: 100px;
+}
+.testimonial h2{
+    margin-top: 100px;
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 30px;
+    font-weight: 600;
+}
+.testimonial-slider{
+    margin-top: 60px;
+}
+.testimonial-slider-content{
+    border: 1px solid rgb(235, 234, 234);
+    border-radius: 8px;
+    padding: 40px 30px;
+}
+
+.testimonial-slider .testimonial-slider-content .title{
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.testimonial-slider .testimonial-slider-content .title h5{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.testimonial-slider-content p{
+    color: #767676;
+    line-height: 25px;
+}
+
+.testimonial-slider-content .customer{
+    margin-top: 30px;
+}
+
+.testimonial-slider-content .customer .customer-details .name{
+    font-weight: 600;
+}
+
+.testimonial-slider-content .customer .customer-details .position{
+    color: #767676;
+    font-size: 15px;
+}
+
+.testimonial-slider-content .customer .customer-details{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+}
+
+.news-article{
+    margin-top: 160px;
+}
+.news-article h2{
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 90px;
+}
+
+.news-article-blog .blog-content ul{
+    display: flex;
+    gap: 8px;
+    color:#767676;
+    font-size: 15px;
+}
+
+.news-article-blog .blog-content a{
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+.news-article-blog .blog-content a h6 i{
+    margin-left: 10px;
+}
+.news-article-blog .blog-content a h6{
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+}
+
+.news-article-blog .blog-content a h6::after{
+    content: "";
+    height: 2px;
+    width:0%;
+    background-color: var(--primary-color);
+    transition: 0.5s;
+    position: absolute;
+    bottom: -6px;
+    left: 0%;
+}
+
+.news-article-blog .blog-content a h6:hover::after{
+    width: 20%;
+}
+
+.news-article-blog .blog-content a h5{
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 25px;
+}
+.news-article-blog .blog-content p{
+    padding: 12px 0px 30px;
+    font-size: 14px;
+    line-height: 25px;
+    color: #222222;
+}
+
+.news-article-blog{
+    background-color: white;
+    border-radius: 8px;
+    height: 410px;
+}
+.news-article-blog img{
+    position: relative;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-bottom: 80%;
+}
+
+.news-article-blog .blog-content{
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    padding-inline: 20px;
+    margin-bottom: 30px;
+}
+
+footer{
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.top-footer h2{
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.top-footer p{
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.top-footer form{
+    margin: 30px 0px 40px;
+
+}
+
+.top-footer form input{
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    padding-block: 15px;
+    padding-left: 15px;
+    width: 50%;
+}
+
+.top-footer form input:focus-visible{
+    outline: none;
+}
+
+.top-footer form button{
+    background-color: var(--secondary-color);
+    color: black;
+    border: none;
+    padding-block: 15px;
+    width: 10%;
+    font-weight: 600;
+    border-radius: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.top-footer ul{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    font-size: 14px;
+    margin-bottom: 30px;  
+}
+
+.top-footer .footer-nav li{
+    position: relative;
+}
+
+.top-footer .footer-nav li::after{
+    position: absolute;
+    left: 0%;
+    bottom: -3px;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.top-footer .footer-nav li:hover::after{
+    width: 30%;
+}
+
+.top-footer .footer-nav-icon li:hover i{
+   color: #767676;
+}
+
+.top-footer{
+    border-bottom: 1px solid #767676;
+}
+
+.top-footer .footer-nav-icon{
+    margin-bottom: 80px;
+}
+
+.bottom-footer{
+    display: flex;
+    justify-content: space-between;
+    padding-block: 30px;  
+    font-size: 14px; 
+    font-weight: 400;
+}
+
+.bottom-footer .bottom-right-content select{
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin-inline: 20px;
+    
+}
+
+.brands .brand-img{
+    padding-bottom: 50px;
+}

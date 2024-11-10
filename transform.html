@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .boxA{
+            height: 300px;
+            width: 300px;
+            background-color: aquamarine;
+            transition: 0.5s;   
+            margin-inline: auto;
+            overflow: hidden;
+        } */
+
+        /* .boxA img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: 0.5s; 
+        }
+
+        .boxA img:hover{
+            transform: scale(1.5) rotate(360deg);
+        } */
+
+        .boxA{
+            height: 300px;
+            width: 300px;
+            background-color: aquamarine;
+            transition: 0.5s;   
+            margin-inline: auto;
+            /* transform: skew(30deg);  */
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        .boxA h1{
+            transform: skew(-30deg);
+            text-align: center;
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="boxA">
+        <h1>hello</h1>
+        <!-- <img src="images/cat.jpg" alt=""> -->
+    </div>
+    
+</body>
+</html>
